@@ -5,8 +5,8 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  color: black;
-  background-color: white;
+  color: rgb(0, 0, 0);
+  background-color: #ad1d61
 }
 
 nav {
@@ -44,3 +44,4 @@ h1 {
   font-weight: bold;
   font-size: 1.5rem;
 }
+
