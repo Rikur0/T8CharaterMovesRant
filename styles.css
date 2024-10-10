@@ -46,7 +46,7 @@ h1 {
   text-align: center;
 }
 p {
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-family: Georgia, Times, 'Times New Roman', serif;
 font-size: large;
 font-style: italic;
 }
@@ -62,11 +62,12 @@ div {
   flex-direction: row;
   justify-content: space-evenly;
   border: 5px solid black;
+  border-radius: 20px;
   
   }
   .box{
-    width: 390px;
-    height: 150px;
+    width: 350px;
+    height: 120px;
     font-size: 1em;
     text-align: center;
   }
@@ -86,3 +87,4 @@ div {
     background-color: #5F5F67;
     color: #000;
   }
+ 
