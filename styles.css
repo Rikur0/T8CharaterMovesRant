@@ -95,3 +95,12 @@ ol {
   align-items: center;
   justify-content: center;
 }
+form {
+ display: flex;
+ flex-direction: column;
+align-items: baseline;
+gap: 30px;
+padding: 1rem;
+  
+
+}
