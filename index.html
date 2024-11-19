@@ -38,9 +38,32 @@
             <li><a href="#">Practice</a></li>
             <li><a href="#">Ranked/Quick Matches</a></li>
           </ul>
+          <li><a href="Contact.html">Contact</a></li>
         </li>
   </nav>
   <main>
+    <div>
+      <label> Dark mode
+        <input type="checkbox" onchange="toggleDarkMode()">
+      </label>
+      <script>
+        let isDarkMode = false;
+        const body = document.body
+
+        const toggleDarkMode = () => {
+          console. log("using dark mode:" + isDarkMode);
+          isDarkMode = !isDarkMode
+          if( isDarkMode) {
+            body.style ["backgroundColor"] = "black"
+            body.style["color"] = "purple";
+          
+          } else {
+            body.style ["backgroundColor"] = "grey"
+            body.style["color"] = "yellow";
+          }
+        }
+      </script>
+    </div>
     <h1>Feature Character</h1>
     <br>
     <div class="container2">
