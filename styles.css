@@ -206,3 +206,16 @@ form {
   padding: 1rem;
 
 }
+table{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 5px solid black;
+  border-radius: 20px;
+}
+#table {
+  width: 350px;
+  height: 120px;
+  font-size: 1em;
+  text-align: center;
+}
