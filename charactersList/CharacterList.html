@@ -18,6 +18,17 @@
       <a href="/charactersList/page4.html" aria-current="page">Renia</a>
     </nav>
     <main>
+      <select id="playstyle"></select>
+      <script>
+        const array = ["RushDown", "Grabber", "Mixups"];
+        const select = document.getElementById("playstyle");
+        array.forEach((playstyle) => {
+          option = document.createElement("option");
+          option.value = playstyle;
+          option.text = playstyle;
+          select.appendChild(option);
+        })
+      </script>
       <div>
       <table id="'table">
         <tr>
@@ -30,12 +41,7 @@
           <td>Good for Beginners</td>
           
       </table>
-      <script>
-        const RushDown = ["Jin Kazama", "Hwoarang", "Reina"];
-        RushDown.forEach(1); {
-          console.log (1);
-        }
-      </script>
+    
     </div>
     </main>
   </body>
