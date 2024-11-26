@@ -1,42 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon"
-    href="/images/favicon.ico">
-    <title>character</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/charactersList/page5.html" aria-current="page">Heihachi Mishima</a>
-      <a href="/charactersList/page2.html" aria-current="page">Jin Kazama</a>
-      <a href="/charactersList/page3.html" aria-current="page">Kazuya Mishima</a>
-      <a href="/charactersList/page4.html" aria-current="page">Renia</a>
-    </nav>
-    <main>
-      <div>
+
+<head>
+  <link rel="icon" href="/images/favicon.ico">
+  <title>character</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="script.js"></script>
+</head>
+
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/charactersList/page5.html" aria-current="page">Heihachi Mishima</a>
+    <a href="/charactersList/page2.html" aria-current="page">Jin Kazama</a>
+    <a href="/charactersList/page3.html" aria-current="page">Kazuya Mishima</a>
+    <a href="/charactersList/page4.html" aria-current="page">Renia</a>
+  </nav>
+  <main>
+    <select id="playstyle"></select>
+    <script>
+      const array = ["RushDown", "Grabber", "Mixups"];
+      const select = document.getElementById("playstyle");
+      array.forEach((playstyle) => {
+        option = document.createElement("option");
+        option.value = playstyle;
+        option.text = playstyle;
+        select.appendChild(option);
+      })
+    </script>
+    <div>
       <table id="'table">
-        <tr>
+        <thead><tr>
           <th>Characters</th>
           <th>Style</th>
           <th>Ease of Use</th>
-          </tr>
-          <td>Jin Kazama</td>
-          <td>RushDown</td>
-          <td>Good for Beginners</td>
-          
+        </tr></thead>
+        <tbody>
+        </tbody>
       </table>
       <script>
-        const RushDown = ["Jin Kazama", "Hwoarang", "Reina"];
+        const RushDown = ["Jin Kazama", "Kazuya Mishima", "Reina"];
         RushDown.forEach(1); {
-          console.log (1);
+          console.log(1);
         }
       </script>
+      <script>
+        const playstyle = [{
+          name: "Jin Kazama",
+          archetype: "RushDown",
+          EaseofUse: "Easy",
+        },{
+          name: "Hwoarang",
+          archetype: "Mixups",
+          EaseofUse: "hard",
+        },{
+          name: "Reina",
+          archetype: "Mixups",
+          EaseofUse: "Medium",
+        },{
+          name: "Kazuya Mishima",
+          archetype:"Rushdown",
+          EaseofUse:"Hard",
+        },{
+          name: "Heihachi Mishima",
+          archetype:"Rushdown",
+          EaseofUse:"Hard",
+        },{
+          name: "Jack",
+          archetype:"Grabber",
+          EaseofUse:"Easy",
+        },{
+          name: "king",
+          archetype:"Brabber",
+          EaseofUse:"Medium",
+        },{
+          name: "Akuma",
+          archetype:"Mixups",
+          EaseofUse:"Hard",
+        }]
+        const writeTablerow = (table,playstyle) => {
+          const newRow = table.insertRow();
+
+          newRow.innerHTML = `<tr id=${playstyle.name}>
+            <td>${playstyle.name}</td>
+            <td>${playstyle.archetype}</td>
+            <td>${playstyle.EaseofUse}</td>
+            </tr>`;
+        }
+        const tableBody = document.getElementsByTagName("body")[0];
+        writeTablerow(tabelbody,playstyle[1]);
+      </script>
     </div>
-    </main>
-  </body>
+  </main>
+</body>
+
 </html>
