@@ -21,7 +21,7 @@
   <main>
     <select id="playstyle"></select>
     <script>
-      const array = ["RushDown", "Grabber", "Mixups"];
+      const array = ["All", "RushDown", "Grabber", "Mixups"];
       const select = document.getElementById("playstyle");
       array.forEach((playstyle) => {
         option = document.createElement("option");
@@ -104,6 +104,7 @@
           playstyle.forEach ((row) => {
             writeTablerow(table,row);
           })
+          
         }
         makeTable()
       </script>
