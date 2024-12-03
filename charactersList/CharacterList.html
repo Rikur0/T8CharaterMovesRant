@@ -54,7 +54,7 @@
         },{
           name: "Hwoarang",
           archetype: "Mixups",
-          EaseofUse: "hard",
+          EaseofUse: "Hard",
         },{
           name: "Reina",
           archetype: "Mixups",
@@ -72,13 +72,21 @@
           archetype:"Grabber",
           EaseofUse:"Easy",
         },{
-          name: "king",
-          archetype:"Brabber",
+          name: "King",
+          archetype:"Grabber",
           EaseofUse:"Medium",
         },{
           name: "Akuma",
           archetype:"Mixups",
           EaseofUse:"Hard",
+        },{
+          name: "Lili",
+          archetype:"Mixups",
+          EaseofUse:"Medium"
+        },{
+          name: "Asuka",
+          archetype:"RushDown",
+          EaseofUse:"Medium"
         }]
         const writeTablerow = (table,playstyle) => {
           const newRow = table.insertRow();
@@ -89,9 +97,17 @@
             <td>${playstyle.EaseofUse}</td>
             </tr>`;
         }
-        const tableBody = document.getElementsByTagName("body")[0];
-        writeTablerow(tabelbody,playstyle[1]);
+        
+
+        const makeTable = () => {
+          const table = document.getElementsByTagName("tbody")[0]
+          playstyle.forEach ((row) => {
+            writeTablerow(table,row);
+          })
+        }
+        makeTable()
       </script>
+      
     </div>
   </main>
 </body>
