@@ -100,10 +100,14 @@
         
 
         const makeTable = () => {
-          const table = document.getElementsByTagName("tbody")[0]
-          playstyle.forEach ((row) => {
-            writeTablerow(table,row);
-          })
+          const tableBody = document.getElementsByTagName("tbody")[0]
+          tableBody.innerHTML = "";
+          if (select.value = "all") {
+          playstyle.forEach ((row) => writeTablerow(table,row));
+         } else {
+           const filtered = playstyle.filter((r) => select.value == archetype.type)
+          filtered.forEach((r)=> writeTablerow(tableBody.archetype))
+          }
           
         }
         makeTable()
