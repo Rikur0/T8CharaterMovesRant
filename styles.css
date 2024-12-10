@@ -68,6 +68,7 @@ nav {
   border-bottom: solid 1px #aaa;
   background-color: #ece7e7;
   flex-direction: row;
+  z-index: 99;
 }
 
 nav a {
@@ -80,6 +81,7 @@ nav a {
   text-decoration: none;
   color: #555;
   flex-direction: row;
+  z-index: 99;
 }
 
 nav a[aria-current='page'] {
