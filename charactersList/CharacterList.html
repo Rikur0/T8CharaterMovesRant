@@ -18,6 +18,100 @@
       <a href="/charactersList/page4.html" aria-current="page">Renia</a>
     </nav>
     <main>
+      <select id="playstyle"></select>
+    <script>
+      const array = ["All", "RushDown", "Grabber", "Mixups"];
+      const select = document.getElementById("playstyle");
+      array.forEach((playstyle) => {
+        option = document.createElement("option");
+        option.value = playstyle;
+        option.text = playstyle;
+        select.appendChild(option);
+      })
+    </script>
+    <div>
+      <table id="'table">
+        <thead><tr>
+          <th>Characters</th>
+          <th>Style</th>
+          <th>Ease of Use</th>
+        </tr></thead>
+        <tbody>
+        </tbody>
+      </table>
+      <script>
+        const RushDown = ["Jin Kazama", "Kazuya Mishima", "Reina"];
+        RushDown.forEach(1); {
+          console.log(1);
+        }
+      </script>
+      <script>
+        const playstyle = [{
+          name: "Jin Kazama",
+          archetype: "RushDown",
+          EaseofUse: "Easy",
+        },{
+          name: "Hwoarang",
+          archetype: "Mixups",
+          EaseofUse: "Hard",
+        },{
+          name: "Reina",
+          archetype: "Mixups",
+          EaseofUse: "Medium",
+        },{
+          name: "Kazuya Mishima",
+          archetype:"Rushdown",
+          EaseofUse:"Hard",
+        },{
+          name: "Heihachi Mishima",
+          archetype:"Rushdown",
+          EaseofUse:"Hard",
+        },{
+          name: "Jack",
+          archetype:"Grabber",
+          EaseofUse:"Easy",
+        },{
+          name: "King",
+          archetype:"Grabber",
+          EaseofUse:"Medium",
+        },{
+          name: "Akuma",
+          archetype:"Mixups",
+          EaseofUse:"Hard",
+        },{
+          name: "Lili",
+          archetype:"Mixups",
+          EaseofUse:"Medium"
+        },{
+          name: "Asuka",
+          archetype:"RushDown",
+          EaseofUse:"Medium"
+        }]
+        const writeTablerow = (table,playstyle) => {
+          const newRow = table.insertRow();
+
+          newRow.innerHTML = `<tr id=${playstyle.name}>
+            <td>${playstyle.name}</td>
+            <td>${playstyle.archetype}</td>
+            <td>${playstyle.EaseofUse}</td>
+            </tr>`;
+        }
+        
+
+        const makeTable = () => {
+          const tableBody = document.getElementsByTagName("tbody")[0]
+          tableBody.innerHTML = "";
+          if (select.value = "all") {
+          playstyle.forEach ((row) => writeTablerow(table,row));
+         } else {
+           const filtered = playstyle.filter((r) => select.value == archetype.type)
+          filtered.forEach((r)=> writeTablerow(tableBody.archetype))
+          }
+          
+        }
+        makeTable()
+      </script>
+      
     </main>
   </body>
 </html>
